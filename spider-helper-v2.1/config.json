@@ -1,0 +1,33 @@
+{
+    "sources": "/opt/pingan_ecai",
+    "spiders": {
+        "colipu": {
+            "subdir": "colipu",
+            "command": "./main_colipu"
+        },
+        "gome": {
+            "subdir": "gome",
+            "command": "./main_gome"
+        },
+        "jingdong": {
+            "subdir": "jingdong",
+            "command": "./main_jd"
+        },
+        "staple": {
+            "subdir": "staple",
+            "command": "./main_staple"
+        }
+    },
+    "monitors": [
+        "colipu",
+        "gome",
+        "jingdong",
+        "staple"
+    ],
+    "hosts": [
+        "10.1.1.118",
+        "10.1.1.114",
+        "10.1.1.122",
+        "10.1.1.18"
+    ]
+}
