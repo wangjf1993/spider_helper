@@ -1,0 +1,19 @@
+{
+    "sources": "/root/dzdp",
+    "spiders": {
+        "shop": "python3 /root/dzdp/get_shopinfo_week.py",
+        "simple": "python3 /root/dzdp/simple_shop_info.py",
+        "mid_market": "python3 /root/dzdp/market_base_info_mid.py",
+        "market": "python3 /root/dzdp/market_base_info.py"
+    },
+    "monitors": [
+        "shop",
+        "simple",
+        "mid_market",
+        "market"
+    ],
+    "hosts": [
+        "10.1.6.67",
+        "10.1.1.70"
+    ]
+}

@@ -1,0 +1,35 @@
+{
+    "sources": "/root/haier",
+    "spiders": {
+        "main_jd": "python3 -m haier.jingdong.main_jd",
+        "jd": "python3 -m haier.script.jd.run",
+        "sn": "python3 -m haier.script.sn.run",
+        "tb": "python3 -m haier.script.tb.taobao_trial",
+        "tmall": "python3 -m haier.script.tmall.tmall_trial",
+        "jd_update": "python3 -m haier.script.jd.p_update",
+        "sn_update": "python3 -m haier.script.sn.p_update"
+    },
+    "monitors": [
+        "jd",
+        "sn",
+        "tb",
+        "tmall"
+    ],
+    "hosts": [
+        "10.1.1.92",
+        "10.1.1.9",
+        "10.1.1.34",
+        "10.1.1.35",
+        "10.1.1.75",
+        "10.1.1.113",
+        "10.1.1.53",
+        "10.1.1.61"
+    ],
+    "hosts_by": [
+        "10.1.1.35",
+        "10.1.1.75",
+        "10.1.1.113",
+        "10.1.1.53",
+        "10.1.1.61"
+    ]
+}

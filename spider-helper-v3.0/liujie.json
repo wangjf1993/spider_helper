@@ -1,0 +1,24 @@
+{
+    "sources": "/root/liujie",
+    "spiders": {
+        "name": "python3 -m liujie.get_people_name",
+        "relation": "python3 -m liujie.relationship",
+        "more": "python3 -m liujie.relation_from_relsci",
+        "detail": "python3 -m liujie.detail_relation"
+    },
+    "monitors": [
+        "name",
+        "relation",
+        "detail"
+    ],
+    "hosts": [
+        "10.1.1.101",
+        "10.1.1.16",
+        "10.1.1.75",
+        "10.1.1.113",
+        "10.1.1.34",
+        "10.1.1.35",
+        "10.1.1.53",
+        "10.1.1.61"
+    ]
+}

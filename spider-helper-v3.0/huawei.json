@@ -1,0 +1,19 @@
+{
+    "sources": "/root/huawei",
+    "spiders": {
+        "c114": "python3 -m huawei.c114.main_c114",
+        "iotworld": "python3 -m huawei.iotworld.main_iotworld",
+        "people": "python3 -m huawei.people.main_people",
+        "xinlang": "python3 -m huawei.xinlang.main_xinlang"
+    },
+    "monitors": [
+        "c114",
+        "iotworld",
+        "people",
+        "xinlang"
+    ],
+    "hosts": [
+        "10.1.1.90",
+        "10.1.1.117"
+    ]
+}

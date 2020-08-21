@@ -1,0 +1,12 @@
+{
+    "sources": "/root/huawei",
+    "spiders": {
+        "img": "python3 -m huawei.change_img"
+    },
+    "monitors": [
+         "img"
+    ],
+    "hosts": [
+        "10.1.1.90"
+    ]
+}

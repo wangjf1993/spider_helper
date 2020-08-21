@@ -11,7 +11,7 @@ def get_local_ip():
     return addr.split('/')[0]
 
 
-local_ip =get_local_ip()
+local_ip = get_local_ip()
 
 
 def remote_cmd(host, cmd):
@@ -19,8 +19,8 @@ def remote_cmd(host, cmd):
         return os.popen(cmd)
     else:
         return os.popen('ssh %s "%s"' % (host, cmd))
-    
-    
+
+
 def kill_pid(host, name):
     print("### ssh to %s ..." % host)
     cmd = "ps -ef|grep -vE 'grep|monitor.py|kill.py'|grep %s" % name
@@ -38,9 +38,10 @@ def get_hosts():
 
 
 def get_spiders(name=None):
-    spiders = {}
     with open("./config.json", 'r') as f:
         spiders = json.load(f)['spiders']
+    if name == "all":
+        return spiders
     if name and name not in spiders:
         return None
     return spiders[name] if name else spiders
@@ -54,5 +55,10 @@ if __name__ == "__main__":
         print("Cannot found '%s' in config.json." % ps_name)
         exit(1)
 
-    for host in hosts:
-        kill_pid(host, spider[1])
+    if isinstance(spider, dict):
+        for key, value in spider.items():
+            for host in hosts:
+                kill_pid(host, value[1])
+    else:
+        for host in hosts:
+            kill_pid(host, spider[1])
